@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-primary : hsla(240, 30%, 60%, 1);
+    --clr-secondary : hsla(60, 30%, 60%, 1);
+    --text-clr : hsla(270, 0%, 0%, 1);
+
+}
+body{
+    color: var(--text-clr);
+}
+
+input {
+    visibility: hidden;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: max-content;
+    padding-top: 15vh;
+    background-color: var(--clr-primary);
+    border-right: 3px double black;
+    overflow: hidden;
+}
+
+
+#newListSubmit::after {
+    border-bottom: 2px solid inherit;
+    height: 2px;
+}
