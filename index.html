@@ -21,8 +21,9 @@
                     <label for="newListInput">
                         <input id="newListInput" type="text" class="new-list-input" />
                     </label>
-                    <label for="newListSubmit"></label>
-                    <input id="newListSubmit" type="button" value="+" submit="" />
+                    <label for="newListSubmit">
+                        <input id="newListSubmit" type="button" value="+" submit="" />
+                    </label>
                 </form>
             </div>
         </nav>
@@ -30,10 +31,10 @@
             <h1 class="title">My Fancy to-do app, v2</h1>
         </header>
         <main>
-            <section>
+            <section class="list-section">
                 <div class="list-header">
-                    <div class="list-title">Shopping List</div>
-                    <div class="list-counter">You have 3 incompleted items remaining</div>
+                    <h4 class="list-title">Shopping List</h4>
+                    <div class="list-counter">3 incompleted items remaining</div>
                 </div>
                 <div class="list-body">
                     <ul class="list">
@@ -41,9 +42,19 @@
                         <li class="list-item">Chocolate</li>
                         <li class="list-item">Milk</li>
                     </ul>
+                    <form class="new-task-wrapper">
+                        <label for="newTaskInput">
+                            <input id="newTaskInput" type="text" class="new-task-input" />
+                        </label>
+                        <label for="newTaskSubmit">
+                            <input id="newTaskSubmit" type="button" value="+" submit="" />
+                        </label>
+                    </form>
+                    <div class="btns-wrapper">
+                        <div class="btn">Clear completed items</div>
+                        <div class="btn">Delete list</div>
+                    </div>
                 </div>
-                <div></div>
-                <div></div>
             </section>
         </main>
     </body>
