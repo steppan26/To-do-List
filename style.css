@@ -65,7 +65,7 @@ section {
     margin-right: 1em;
 }
 
-.list-header > div {
+.list-header > p {
     font-size: 0.85em;
 }
 
@@ -86,7 +86,7 @@ section {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -50px;
+    bottom: 50px;
 }
 
 .new-task-wrapper{

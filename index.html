@@ -17,12 +17,16 @@
                     <li class="list">list 2</li>
                     <li class="list">list 3</li>
                 </ul>
-                <form class="new-list-wrapper">
+                <form action=""">
                     <label for="newListInput">
-                        <input id="newListInput" type="text" class="new-list-input" />
+                        <input
+                            id="newListInput"
+                            type="text"
+                            class="new-list-input"
+                        />
                     </label>
                     <label for="newListSubmit">
-                        <input id="newListSubmit" type="button" value="+" submit="" />
+                        <button id="newListSubmit">+</button>
                     </label>
                 </form>
             </div>
@@ -34,22 +38,51 @@
             <section class="list-section">
                 <div class="list-header">
                     <h4 class="list-title">Shopping List</h4>
-                    <div class="list-counter">3 incompleted items remaining</div>
+                    <p class="list-counter">3 incompleted items remaining</p>
                 </div>
+
                 <div class="list-body">
-                    <ul class="list">
-                        <li class="list-item">Bread</li>
-                        <li class="list-item">Chocolate</li>
-                        <li class="list-item">Milk</li>
+                    <ul class="tasks">
+                        <li class="task-item">
+                            <input type="checkbox" id="task-1" />
+                            <label for="task-1">
+                                <span class="custom-checkbox"></span>
+                                Bread
+                            </label>
+                        </li>
+                        <!-- End of task 1 -->
+                        <li class="task-item">
+                            <input type="checkbox" id="task-2" />
+                            <label for="task-2">
+                                <span class="custom-checkbox"></span>
+                                Bread
+                            </label>
+                        </li>
+                        <!-- End of task 2 -->
+                        <li class="task-item">
+                            <input type="checkbox" id="task-3" />
+                            <label for="task-3">
+                                <span class="custom-checkbox"></span>
+                                Bread
+                            </label>
+                        </li>
+                        <!-- End of task 3 -->
                     </ul>
-                    <form class="new-task-wrapper">
-                        <label for="newTaskInput">
-                            <input id="newTaskInput" type="text" class="new-task-input" />
-                        </label>
-                        <label for="newTaskSubmit">
-                            <input id="newTaskSubmit" type="button" value="+" submit="" />
-                        </label>
-                    </form>
+
+                    <div class="new-task-creator">
+                        <form action="">
+                                <input
+                                    id="newTaskInput"
+                                    type="text"
+                                    class="new-task-input"
+                                    placeholder="Enter new task"
+                                    />
+                            <label for="newTaskSubmit">
+                                <button id="newTaskSubmit">+</button>
+                            </label>
+                        </form>
+                    </div>
+
                     <div class="btns-wrapper">
                         <div class="btn">Clear completed items</div>
                         <div class="btn">Delete list</div>
@@ -57,5 +90,15 @@
                 </div>
             </section>
         </main>
+
+        <template>
+            <li class="task-item">
+                <input type="checkbox" id="task-1" />
+                <label for="task-1">
+                    <span class="custom-checkbox"></span>
+                    Bread
+                </label>
+            </li>
+        </template>
     </body>
 </html>
