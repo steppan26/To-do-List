@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700;900&display=swap" rel="stylesheet">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,92 +16,77 @@
             <h1 class="title">My Fancy to-do app, v2</h1>
         </header>
         <div class="all-tasks">
-            <h3>My Lists</h3>
-            <div class="menu-sidebar">
-                <ul class="lists-wrapper">
-                    <li class="list">list 1</li>
-                    <li class="list">list 2</li>
-                    <li class="list">list 3</li>
-                </ul>
-                <form action=""">
-                    <label for="newListInput">
-                        <input
-                            id="newListInput"
-                            type="text"
-                            class="new-list-input"
-                        />
-                    </label>
-                    <label for="newListSubmit">
-                        <button id="newListSubmit">+</button>
-                    </label>
-                </form>
-            </div>
+            <h2>My Lists</h2>
+            <ul class="task-list">
+                <li class="active-list">list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+            </ul>
+
+            <form action=""">
+                <input
+                    type="text"
+                    class="new-input"
+                    placeholder="Enter new list"
+                    aria-label="new list name"
+                />
+                <button class="btn"
+                    aria-label="create new list">+</button>
+            </form>
         </div>
-        <main>
-            <section class="list-section">
-                <div class="list-header">
-                    <h2 class="list-title">Shopping List</h2>
-                    <p class="list-counter">3 incompleted items remaining</p>
+
+        <section class="list-section">
+            <div class="list-header">
+                <h2 class="list-title">Shopping List</h2>
+                <p class="list-counter">3 left</p>
+            </div>
+
+            <div class="list-body">
+                <div class="tass">
+                    <div class="task-item">
+                        <input type="checkbox" id="task-1" />
+                        <label for="task-1">
+                            <span class="custom-checkbox"></span>
+                            Bread
+                        </label>
+                    </div>
+                    <!-- End of task 1 -->
+                    <div class="task-item">
+                        <input type="checkbox" id="task-2" />
+                        <label for="task-2">
+                            <span class="custom-checkbox"></span>
+                            Chocolate
+                        </label>
+                    </div>
+                    <!-- End of task 2 -->
+                    <div class="task-item">
+                        <input type="checkbox" id="task-3" />
+                        <label for="task-3">
+                            <span class="custom-checkbox"></span>
+                            Milk
+                        </label>
+                    </div>
+                    <!-- End of task 3 -->
                 </div>
 
-                <div class="list-body">
-                    <ul class="tasks">
-                        <li class="task-item">
-                            <input type="checkbox" id="task-1" />
-                            <label for="task-1">
-                                <span class="custom-checkbox"></span>
-                                Bread
-                            </label>
-                        </li>
-                        <!-- End of task 1 -->
-                        <li class="task-item">
-                            <input type="checkbox" id="task-2" />
-                            <label for="task-2">
-                                <span class="custom-checkbox"></span>
-                                Bread
-                            </label>
-                        </li>
-                        <!-- End of task 2 -->
-                        <li class="task-item">
-                            <input type="checkbox" id="task-3" />
-                            <label for="task-3">
-                                <span class="custom-checkbox"></span>
-                                Bread
-                            </label>
-                        </li>
-                        <!-- End of task 3 -->
-                    </ul>
-
-                    <div class="new-task-creator">
-                        <form action="">
-                                <input
-                                    id="newTaskInput"
-                                    type="text"
-                                    class="new-task-input"
-                                    placeholder="Enter new task"
-                                    />
-                            <label for="newTaskSubmit">
-                                <button id="newTaskSubmit">+</button>
-                            </label>
-                        </form>
-                    </div>
-
-                    <div class="btns-wrapper">
-                        <div class="btn">Clear completed items</div>
-                        <div class="btn">Delete list</div>
-                    </div>
+                <div class="new-task-creator">
+                    <form action=""">
+                        <input
+                            type="text"
+                            class="new-input"
+                            placeholder="Enter new task"
+                            aria-label="new list name"
+                        />
+                        <button class="btn"
+                            aria-label="create new list">+</button>
+                    </form>
                 </div>
-            </section>
-        </main>
 
-        <template>
-            <li class="task-item">
-                <input type="checkbox" id="task-1" />
-                <label for="task-1">
-                    <span class="custom-checkbox"></span>
-                    Bread
-                </label>
-            </li>
-        </template>
+                <div class="btns-wrapper">
+                    <div class="btn">Clear completed items</div>
+                    <div class="btn">Delete list</div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
