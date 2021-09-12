@@ -7,11 +7,11 @@
 }
 
 :root {
-    --clr-primary : hsla(240, 30%, 60%, 1);
-    --clr-primary-accent : hsla(240, 80%, 60%, 1);
-    --clr-secondary : hsla(60, 30%, 60%, 1);
-    --text-clr-primary : hsla(270, 100%, 100%, 1);
-    --text-clr-secondary : hsla(240, 30%, 60%, 1);
+    --clr-primary : hsla(220, 50%, 50%, 1);
+    --clr-primary-accent : hsla(220, 100%, 40%, 1);
+    --clr-secondary : hsla(40, 75%, 50%, 1);
+    --text-clr-primary : hsla(40, 100%, 70%, 1);
+    --text-clr-secondary : hsla(220, 35%, 50%, 1);
 
 
 }
@@ -32,7 +32,7 @@ header {
 
 /* lists section */
     .all-tasks {
-        visibility:hidden;
+        visibility:visible;
         display: flex;
         flex-flow: column nowrap;
         position: fixed;
@@ -69,7 +69,8 @@ header {
         transform: scale(1.1);
     }
     .active-list {
-        font-weight: 700;
+        font-weight: 900;
+        letter-spacing: 1px;
     }
 
     form{
@@ -112,12 +113,14 @@ header {
 section {
     width: 85vw;
     height: max-content;
-    border: 2px double var(--clr-secondary);
+    max-height: 75vh;
     padding: 1em;
-    z-index: 0;
-    background-color: var(--clr-secondary);
+    overflow: hidden;
     border-radius: 8px;
+    border: 2px double var(--clr-secondary);
+    background-color: var(--clr-secondary);
     color: var(--text-clr-secondary);
+    z-index: 0;
 }
 
 .list-header {
@@ -156,11 +159,12 @@ section {
 .task-item {
     position: relative;
     font-weight: 500;
+    opacity: 0.8;
     transition: opacity 180ms ease-in-out;
 }
 
 .task-item:hover {
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .task-item::after {
@@ -194,21 +198,22 @@ section {
     width: var(--size);
     height: var(--size);
     margin-right: var(--size);
-    border: 2px solid currentColor;
+    border: 2px solid var(--clr-primary);
     border-radius: 50%;
     transform: scale(1);
-    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, color 160ms ease-in;
 }
 
 .task-item:hover .custom-checkbox,
 [type="checkbox"]:focus + label .custom-checkbox {
     transform: scale(1.2);
+    color: var(--clr-primary-accent);
 }
 
 [type="checkbox"]:checked + label .custom-checkbox {
-    background: var(--clr-primary);
-    border-color: var(--clr-primary);
-    box-shadow: inset 0 0 0px 2px var(--clr-primary-accent);
+    background: var(--clr-primary-accent);
+    border-color: var(--clr-primary-accent);
+    box-shadow: inset 0 0 0px 2px var(--clr-secondary);
 }
 
 [type="checkbox"]:checked + label {
@@ -246,12 +251,12 @@ section {
 
 .btns-wrapper > .btn {
     cursor: pointer;
-    color: var(--text-clr-primary);
+    color: var(--clr-secondary);
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 .btns-wrapper > .btn:hover {
-    color: var(--text-clr-secondary);
+    color: var(--text-clr-primary);
 
 }
