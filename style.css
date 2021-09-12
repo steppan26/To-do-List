@@ -115,7 +115,6 @@ section {
     height: max-content;
     max-height: 75vh;
     padding: 1em;
-    overflow: hidden;
     border-radius: 8px;
     border: 2px double var(--clr-secondary);
     background-color: var(--clr-secondary);
