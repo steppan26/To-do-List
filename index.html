@@ -17,18 +17,19 @@
         </header>
         <div class="all-tasks">
             <h2>My Lists</h2>
-            <ul class="task-list">
+            <ul class="task-list" data-list>
                 <li class="active-list">list 1</li>
                 <li>list 2</li>
                 <li>list 3</li>
             </ul>
 
-            <form action=""">
+            <form action="" data-new-list-form>
                 <input
                     type="text"
                     class="new-input"
                     placeholder="Enter new list"
                     aria-label="new list name"
+                    data-new-list-input
                 />
                 <button class="btn"
                     aria-label="create new list">+</button>
