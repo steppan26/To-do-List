@@ -10,6 +10,8 @@ const tasksContainer = document.querySelector('[data-tasks]')
 const taskTemplate = document.getElementById('task-item-template')
 const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
+const menuBtn = document.querySelector('[data-menu-btn]')
+const listsSection = document.querySelector('[data-lists-section]')
 
 
 
@@ -34,6 +36,10 @@ tasksContainer.addEventListener('click', e => {
         save()
         renderTaskCount(selectedList)
     }
+})
+
+menuBtn.addEventListener('click', e => {
+    listsSection.classList.toggle('hidden')
 })
 
 deleteListBtn.addEventListener('click', e => {

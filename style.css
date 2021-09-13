@@ -16,6 +16,7 @@
 
 }
 body{
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -33,7 +34,6 @@ header {
 /* lists section */
     .all-tasks {
         visibility:visible;
-        opacity: 0.4;
         display: flex;
         flex-flow: column nowrap;
         position: fixed;
@@ -49,6 +49,22 @@ header {
         color: var(--text-clr-primary);
         background-color: var(--clr-primary);
         z-index: 5;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: fit-content;
+        padding: 0.2rem 0.8rem;
+        margin-left: auto;
+        border: 1px solid black;
+        font-size: 2rem;
+        font-weight: 900;
+    }
+
+    .hidden {
+        visibility: hidden;
     }
 
     .task-list {
