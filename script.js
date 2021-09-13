@@ -12,6 +12,7 @@ const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
 const menuBtn = document.querySelector('[data-menu-btn]')
 const listsSection = document.querySelector('[data-lists-section]')
+const body = document.querySelector('body')
 
 
 
@@ -20,6 +21,13 @@ const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY))
+
+body.addEventListener('click', e => {
+    if(listsSection.contains(e.target)){
+        console.log(e.target, listsSection)
+        console.log("clicked outside the menu")
+    }
+})
 
 listsContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'li'){

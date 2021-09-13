@@ -19,16 +19,20 @@ body{
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Raleway', sans-serif;
     background-color: var(--clr-primary);
+    height: max-content;
+    min-height: 100vh;
 }
 
 header {
     opacity: 0.4;
     padding: 1.5rem 0;
     text-align: center;
+    width: 70%;
+
 }
 
 /* lists section */
@@ -36,29 +40,25 @@ header {
         visibility:visible;
         display: flex;
         flex-flow: column nowrap;
-        position: fixed;
-        left: 0;
-        top: 0;
-        bottom: 0;
+        position: relative;
         width: 60vw;
         max-width: 60vw;
-        padding-top: 15vh;
+        height: max-content;
+        padding-top: 1em;
         padding-left: 1em;
-        border-right: 3px double black;
-        overflow: hidden;
         color: var(--text-clr-primary);
         background-color: var(--clr-primary);
         z-index: 5;
     }
 
     .menu-btn {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        width: fit-content;
+        position: relative;
+        cursor: pointer;
+        width: max-content;
         padding: 0.2rem 0.8rem;
-        margin-left: auto;
-        border: 1px solid black;
+        box-shadow: 0px 0px 8px 0px var(--clr-primary-accent) inset;
+        border-radius: 10px;
+        color: var(--clr-primary-accent);
         font-size: 2rem;
         font-weight: 900;
     }
@@ -70,7 +70,16 @@ header {
     .task-list {
         line-height: 1.7;
         list-style: circle inside;
-        padding: 1rem 0;
+        padding: 0.5em 0;
+        background-color: var(--clr-primary);
+        overflow: hidden;
+        height: 0;
+
+        transition: height 220ms ease-in-out;
+    }
+
+    .reduce {
+        height: 0;
     }
 
     .task-list > li{
@@ -94,7 +103,15 @@ header {
 
     form{
         display: flex;
-        padding: 1.2em 0;
+        position: fixed;
+        bottom: -5px;
+        left: 2.5em;
+        right: 2.5em;
+        padding: 1.2em 2.5em;
+        background-color: var(--clr-secondary);
+        border-radius: 30px 30px 0 0;
+        border: 1px solid var(--clr-secondary);
+        box-shadow: 0 0 0 2px var(--clr-primary-accent) inset;
     }
 /* end of lists section */
 
