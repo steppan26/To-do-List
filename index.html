@@ -18,9 +18,6 @@
         <div class="all-tasks">
             <h2>My Lists</h2>
             <ul class="task-list" data-list>
-                <li class="active-list">list 1</li>
-                <li>list 2</li>
-                <li>list 3</li>
             </ul>
 
             <form action="" data-new-list-form>
@@ -36,40 +33,14 @@
             </form>
         </div>
 
-        <section class="list-section">
+        <section class="list-section" data-list-display-section>
             <div class="list-header">
-                <h2 class="list-title">Shopping List</h2>
-                <p class="list-counter">3 left</p>
+                <h2 class="list-title" data-list-title>Shopping List</h2>
+                <p class="list-count" data-list-count>3 left</p>
             </div>
 
             <div class="list-body">
-                <div class="tass">
-                    <div class="task-item">
-                        <input type="checkbox" id="task-1" />
-                        <label for="task-1">
-                            <span class="custom-checkbox"></span>
-                            Bread
-                        </label>
-                    </div>
-                    <!-- End of task 1 -->
-                    <div class="task-item">
-                        <input type="checkbox" id="task-2" />
-                        <label for="task-2">
-                            <span class="custom-checkbox"></span>
-                            Chocolate
-                        </label>
-                    </div>
-                    <!-- End of task 2 -->
-                    <div class="task-item">
-                        <input type="checkbox" id="task-3" />
-                        <label for="task-3">
-                            <span class="custom-checkbox"></span>
-                            Milk
-                        </label>
-                    </div>
-                    <!-- End of task 3 -->
-                </div>
-
+                <div class="tasks"  data-tasks></div>
                 <div class="new-task-creator">
                     <form action=""">
                         <input
@@ -89,5 +60,13 @@
                 </div>
             </div>
         </section>
+        <template id='task-item-template'>
+            <div class="task-item">
+                <input type="checkbox" />
+                <label>
+                    <span class="custom-checkbox"></span>
+                </label>
+            </div>
+        </template>
     </body>
 </html>

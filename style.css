@@ -33,6 +33,7 @@ header {
 /* lists section */
     .all-tasks {
         visibility:visible;
+        opacity: 0.4;
         display: flex;
         flex-flow: column nowrap;
         position: fixed;
@@ -52,8 +53,8 @@ header {
 
     .task-list {
         line-height: 1.7;
-        list-style: circle;
-        padding: 1rem;
+        list-style: circle inside;
+        padding: 1rem 0;
     }
 
     .task-list > li{
@@ -66,11 +67,13 @@ header {
 
     .task-list > li:hover {
         opacity: 0.4;
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
     }
+
     .active-list {
         font-weight: 900;
         letter-spacing: 1px;
+        list-style: disc inside;
     }
 
     form{
