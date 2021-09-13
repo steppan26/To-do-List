@@ -2,11 +2,15 @@ const listsContainer = document.querySelector('[data-list]')
 const newListForm = document.querySelector('[data-new-list-form]')
 const newListInput = document.querySelector('[data-new-list-input]')
 const deleteListBtn = document.querySelector('[data-delete-list-btn]')
+const clearCompleteTasksBtn = document.querySelector('[data-clear-complete-tasks-btn]')
 const listDisplaySection = document.querySelector('[data-list-display-section]')
 const listTitleElement = document.querySelector('[data-list-title]')
 const listCountElement = document.querySelector('[data-list-count]')
 const tasksContainer = document.querySelector('[data-tasks]')
 const taskTemplate = document.getElementById('task-item-template')
+const newTaskForm = document.querySelector('[data-new-task-form]')
+const newTaskInput = document.querySelector('[data-new-task-input]')
+
 
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
@@ -19,6 +23,16 @@ listsContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'li'){
         selectedListId = e.target.dataset.listId
         saveAndRender()
+    }
+})
+
+tasksContainer.addEventListener('click', e => {
+    if(e.target.tagName.toLowerCase() === 'input'){
+        const selectedList = lists.find(list => list.id === selectedListId)
+        const selectedTask = selectedList.tasks.find(task => task.id === e.target.id)
+        selectedTask.complete = e.target.checked
+        save()
+        renderTaskCount(selectedList)
     }
 })
 
@@ -39,9 +53,31 @@ newListForm.addEventListener('submit', e => {
     saveAndRender()
 })
 
+newTaskForm.addEventListener('submit', e => {
+    e.preventDefault()
+    const taskName = newTaskInput.value
+    if(taskName === null || taskName === '') return
+    const task = createTask(taskName)
+    newTaskInput.value = null
+    const selectedList = lists.find(list => list.id === selectedListId)
+    selectedList.tasks.push(task)
+    saveAndRender()
+})
+
+clearCompleteTasksBtn.addEventListener('click', e => {
+    const selectedList = lists.find(list => list.id === selectedListId)
+    selectedList.tasks = selectedList.tasks.filter(task => !task.complete)
+    saveAndRender()
+})
+
 function createList(name) {
     console.log(name)
     return { id: Date.now().toString(), name: name, tasks: [] }
+}
+
+function createTask(name){
+    return { id: Date.now().toString(), name: name, copmplete: false }
+
 }
 
 function save() {

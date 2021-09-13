@@ -42,12 +42,13 @@
             <div class="list-body">
                 <div class="tasks"  data-tasks></div>
                 <div class="new-task-creator">
-                    <form action=""">
+                    <form action="" data-new-task-form>
                         <input
                             type="text"
                             class="new-input"
                             placeholder="Enter new task"
                             aria-label="new list name"
+                            data-new-task-input
                         />
                         <button class="btn"
                             aria-label="create new list">+</button>
@@ -55,7 +56,7 @@
                 </div>
 
                 <div class="btns-wrapper">
-                    <div class="btn">Clear completed items</div>
+                    <div class="btn" data-clear-complete-tasks-btn>Clear completed items</div>
                     <div class="btn" data-delete-list-btn >Delete list</div>
                 </div>
             </div>
