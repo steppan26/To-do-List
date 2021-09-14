@@ -91,6 +91,8 @@ header {
     }
 
     .task-list > li{
+        display: inline-flex;
+        align-items: center;
         cursor: pointer;
         flex-grow: 1;
         flex-shrink: 2;
@@ -102,12 +104,14 @@ header {
         background-color: var(--clr-primary);
         color: inherit;
         border-radius: 0.7em 0.7em 0 0;
+        font-size: 1.1em;
 
         transition: opacity 190ms ease-in-out;
     }
 
     .task-list > li:hover {
         opacity: 0.4;
+        border-width: 2px !important;
     }
 
     .active-list {
@@ -290,8 +294,8 @@ section {
     height: max-content;
     background-color: var(--clr-secondary);
     border-radius: 30px 30px 0 0;
-    border: 1px solid var(--clr-secondary);
-    box-shadow: 0 0 0 2px var(--clr-primary-accent) inset;
+    border: 3px solid var(--clr-secondary);
+    box-shadow: 0 0 0 2px var(--clr-primary) inset;
 }
 
 .new-task-creator form {
