@@ -16,19 +16,19 @@
             <h1 class="title">TO DO APP</h1>
         </header>
         <div class="all-tasks subtle-shadow" data-lists-section>
-            <!-- <h2>My Lists</h2> -->
-            <form action="" data-new-list-form>
-                <input
-                    type="text"
-                    class="new-input"
-                    placeholder="Create New List"
-                    aria-label="new list name"
-                    data-new-list-input
-                />
-                <button class="btn"
-                    aria-label="create new list">+</button>
-            </form>
             <ul class="task-list" data-list>
+                <form class="hidden" action="" data-new-list-form>
+                    <span class="new-list-menu-btn" data-new-list-menu-btn>＋</span>
+                    <input
+                        type="text"
+                        class="new-input"
+                        placeholder="Create New List"
+                        aria-label="new list name"
+                        data-new-list-input
+                    />
+                    <button class="btn"
+                        aria-label="create new list">+</button>
+                </form>
             </ul>
 
         </div>

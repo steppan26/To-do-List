@@ -11,6 +11,8 @@ const taskTemplate = document.getElementById('task-item-template')
 const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
 const listsSection = document.querySelector('[data-lists-section]')
+const newListMenuBtn = document.querySelector('[data-new-list-menu-btn]')
+
 
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
@@ -18,6 +20,10 @@ const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY))
+
+newListMenuBtn.addEventListener('click', e => {
+    toggleNewListMenu()
+})
 
 listsContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'li'){
@@ -49,6 +55,7 @@ newListForm.addEventListener('submit', e => {
     const list = createList(listName)
     lists.push(list)
     newListInput.value = null
+    toggleNewListMenu()
     saveAndRender()
 })
 
@@ -69,6 +76,12 @@ clearCompleteTasksBtn.addEventListener('click', e => {
     saveAndRender()
 })
 
+function toggleNewListMenu(){
+    newListForm.classList.toggle('hidden')
+    newListMenuBtn.innerText === '＋' ? newListMenuBtn.innerText = 'Ｘ' : newListMenuBtn.innerText = '＋'
+
+}
+
 function createList(name) {
     return { id: Date.now().toString(), name: name, tasks: [] }
 }
@@ -85,7 +98,7 @@ function save() {
 }
 
 function render() {
-    clearElement(listsContainer)
+    clearLists(listsContainer)
     renderLists()
     const selectedList = lists.find(list => list.id === selectedListId)
     if(selectedListId === null){
@@ -134,6 +147,12 @@ function renderLists(){
 function saveAndRender() {
     save()
     render()
+}
+
+function clearLists(element) {
+    while (element.children.length > 1) {
+        element.removeChild(element.lastElementChild)
+    }
 }
 
 function clearElement(element) {
