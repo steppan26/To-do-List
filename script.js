@@ -11,8 +11,6 @@ const taskTemplate = document.getElementById('task-item-template')
 const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
 const listsSection = document.querySelector('[data-lists-section]')
-const body = document.querySelector('body')
-
 
 
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
@@ -20,13 +18,6 @@ const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY))
-
-body.addEventListener('click', e => {
-    if(listsSection.contains(e.target)){
-        console.log(e.target, listsSection)
-        console.log("clicked outside the menu")
-    }
-})
 
 listsContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'li'){
@@ -55,7 +46,6 @@ newListForm.addEventListener('submit', e => {
     e.preventDefault()
     let listName = newListInput.value
     if(listName === null || listName === '') return
-    console.log(listName)
     const list = createList(listName)
     lists.push(list)
     newListInput.value = null
