@@ -104,8 +104,9 @@ header {
         color: inherit;
         border-radius: 0.7em 0.7em 0 0;
         font-size: 1.1em;
-        color: var(--clr-primary);
         z-index: 0;
+        border: 1px solid hsla(255, 0%, 0%, 0.3);
+        border-bottom: none;
 
         transition: opacity 190ms ease-in-out;
     }
@@ -115,12 +116,10 @@ header {
     }
 
     .active-list {
-        color: var(--clr-primary-accent) !important;
-        padding-bottom: 2rem;
-    }
-
-    .active-list::after {
-        box-shadow: 0 -1px 8px 0px var(--clr-primary-accent) inset;
+        border-bottom: none;
+        border: 3px solid var(--clr-primary-accent) !important;
+        border-bottom: none !important;
+        z-index: 5 !important;
     }
 
 /* end of lists section */
@@ -163,7 +162,7 @@ header {
         /* max-height: 75vh; */
         padding: 1em;
         border-radius: 8px;
-        border: 2px double var(--clr-secondary);
+        border: 1px solid hsla(255, 0%, 0%, 0.3);
         background-color: var(--clr-secondary);
         color: var(--text-clr-secondary);
         z-index: 1;
@@ -192,11 +191,6 @@ header {
 
     .list-body{
         position: relative;
-    }
-
-    .list-body .btn {
-        color: var(--clr-primary-accent);
-        text-shadow: 1px 1px 2px var(--clr-primary-accent);
     }
 
     .tasks{
@@ -303,6 +297,7 @@ header {
         border-radius: 30px 30px 0 0;
         border: 3px solid var(--clr-secondary);
         box-shadow: 0 0 0 2px var(--clr-primary) inset;
+        overflow-x: hidden;
     }
 
     .new-task-creator form {
