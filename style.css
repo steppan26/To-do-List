@@ -7,34 +7,9 @@
 }
 
 :root {
-    /* --clr-primary : hsla(220, 10%, 95%, 1);
-    --clr-primary-accent : hsla(220, 30%, 30%, 1);
-    --clr-secondary : hsla(40, 75%, 50%, 1);
-    --clr-text : hsla(40, 100%, 70%, 1);
-    --clr-text : hsla(220, 35%, 50%, 1); */
     font-size: 0.8rem;
 }
 
-body{
-    position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    background-color: var(--clr-primary);
-    height: max-content;
-    min-height: 100vh;
-}
-
-header {
-    opacity: 0.4;
-    padding: 1.5rem 0;
-    text-align: center;
-    width: 70%;
-    margin-bottom: 1.5rem;
-
-}
 
 .theme1{
     --clr-primary : hsla(220, 10%, 95%, 1);
@@ -51,8 +26,8 @@ header {
 .theme3{
     --clr-primary : hsla(120, 20%, 65%, 1);
     --clr-primary-accent : hsla(120, 20%, 25%, 1);
-    --clr-secondary : hsla(345, 25%, 40%, 1);
-    --clr-text : hsla(120, 25%, 60%, 1);
+    --clr-secondary : hsla(345, 35%, 60%, 1);
+    --clr-text : hsla(120, 25%, 30%, 1);
 }
 
 .theme4{
@@ -61,6 +36,28 @@ header {
     --clr-secondary : hsla(220, 50%, 85%, 1);
     --clr-text : hsla(220, 70%, 60%, 1);
 }
+
+body{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, var(--clr-primary) 15%, white);
+    height: max-content;
+    min-height: 100vh;
+}
+
+header {
+    opacity: 0.4;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 1.5rem;
+
+}
+
 
 .theme-wrapper{
     cursor: pointer;
@@ -179,9 +176,8 @@ header {
         border-radius: 0.7em 0.7em 0 0;
         font-size: 1.1em;
         z-index: 0;
-        border: 1px solid hsla(255, 0%, 0%, 0.3);
         border-bottom: none;
-
+        box-shadow: 0 0 2px 0 var(--clr-primary-accent);
         transition: opacity 190ms ease-in-out;
     }
 
@@ -191,7 +187,7 @@ header {
 
     .active-list {
         border-bottom: none;
-        border: 3px solid var(--clr-primary-accent) !important;
+        border: 1px solid var(--clr-primary-accent) !important;
         border-bottom: none !important;
         z-index: 5 !important;
     }
@@ -260,15 +256,12 @@ header {
     section {
         width: 85vw;
         height: max-content;
-        /* max-height: 75vh; */
         padding: 1em;
         border-radius: 8px;
-        border: 1px solid hsla(255, 0%, 0%, 0.3);
-        background-color: var(--clr-secondary);
+        background: linear-gradient(to bottom left, var(--clr-primary), var(--clr-secondary) 60%);
         color: var(--clr-text);
         z-index: 1;
-        box-shadow: 0 5px 8px 2px var(--clr-primary-accent);
-
+        box-shadow: 0 2px 12px 0px var(--clr-primary-accent);
     }
 
     .list-header {
@@ -396,7 +389,6 @@ header {
         height: max-content;
         background-color: var(--clr-secondary);
         border-radius: 30px 30px 0 0;
-        border: 1px solid hsla(255, 0%, 0%, 0.3);
         box-shadow: 0 0 8px 2px var(--clr-primary-accent);
         overflow-x: hidden;
     }
