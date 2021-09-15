@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="theme1" data-html-element>
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,13 @@
         <header>
             <h1 class="title">TO DO APP</h1>
         </header>
+        <div class="theme-wrapper" data-theme-switcher>
+            <div class="theme-swatch theme1" id="theme1"></div>
+            <div class="theme-swatch theme2" id="theme2"></div>
+            <div class="theme-swatch theme3" id="theme3"></div>
+            <div class="theme-swatch theme4" id="theme4"></div>
+        </div>
+
         <div class="all-tasks subtle-shadow" data-lists-section>
             <ul class="task-list" data-list>
                 <form class="hidden" action="" data-new-list-form>
@@ -32,14 +39,13 @@
             </ul>
 
         </div>
-
         <section class="list-section" data-list-display-section>
             <div class="list-header">
                 <h2 class="list-title" data-list-title>Shopping List</h2>
                 <p class="list-count" data-list-count>3 left</p>
             </div>
 
-            <div class="list-body">
+            <div class="list-body" data-tasks-body>
                 <div class="tasks"  data-tasks></div>
                 <div class="new-task-creator">
                     <form action="" data-new-task-form>

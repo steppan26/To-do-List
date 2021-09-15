@@ -12,6 +12,13 @@ const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
 const listsSection = document.querySelector('[data-lists-section]')
 const newListMenuBtn = document.querySelector('[data-new-list-menu-btn]')
+const tasksBody = document.querySelector('[data-tasks-body]')
+const themeSwitcher = document.querySelector('[data-theme-switcher]')
+const htmlElement = document.querySelector('[data-html-element]')
+const themesArray = [...themeSwitcher.children]
+
+
+
 
 
 
@@ -31,6 +38,17 @@ listsContainer.addEventListener('click', e => {
         saveAndRender()
     }
 })
+
+themeSwitcher.addEventListener('click', e => {
+    themeSwitcher.classList.toggle('theme-switcher-open')
+})
+
+themesArray.forEach(theme => {
+    theme.addEventListener('click', e => {
+        console.log(e.target)
+        htmlElement.className = theme.id
+    })
+});
 
 tasksContainer.addEventListener('click', e => {
     if(e.target.tagName.toLowerCase() === 'input'){
@@ -102,9 +120,10 @@ function render() {
     renderLists()
     const selectedList = lists.find(list => list.id === selectedListId)
     if(selectedListId === null){
-        listDisplaySection.style.display = 'none'
+        tasksBody.style.display = 'none'
+        listTitleElement.innerText = 'No List Selected'
     } else {
-        listDisplaySection.style.display = ''
+        tasksBody.style.display = ''
         listTitleElement.innerText = selectedList.name
         renderTaskCount(selectedList)
         clearElement(tasksContainer)

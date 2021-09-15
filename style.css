@@ -7,14 +7,14 @@
 }
 
 :root {
-    --clr-primary : hsla(220, 10%, 95%, 1);
+    /* --clr-primary : hsla(220, 10%, 95%, 1);
     --clr-primary-accent : hsla(220, 30%, 30%, 1);
     --clr-secondary : hsla(40, 75%, 50%, 1);
-    --text-clr-primary : hsla(40, 100%, 70%, 1);
-    --text-clr-secondary : hsla(220, 35%, 50%, 1);
+    --clr-text : hsla(40, 100%, 70%, 1);
+    --clr-text : hsla(220, 35%, 50%, 1); */
     font-size: 0.8rem;
-
 }
+
 body{
     position: relative;
     display: flex;
@@ -36,6 +36,78 @@ header {
 
 }
 
+.theme1{
+    --clr-primary : hsla(220, 10%, 95%, 1);
+    --clr-primary-accent : hsla(220, 30%, 30%, 1);
+    --clr-secondary : hsla(40, 75%, 50%, 1);
+    --clr-text : hsla(220, 35%, 50%, 1);
+}
+.theme2{
+    --clr-primary : hsla(120, 0%, 40%, 1);
+    --clr-primary-accent : hsla(120, 45%, 0%, 1);
+    --clr-secondary : hsla(220, 5%, 95%, 1);
+    --clr-text : hsla(200, 45%, 15%, 1);
+}
+.theme3{
+    --clr-primary : hsla(120, 20%, 65%, 1);
+    --clr-primary-accent : hsla(120, 20%, 25%, 1);
+    --clr-secondary : hsla(345, 25%, 40%, 1);
+    --clr-text : hsla(120, 25%, 60%, 1);
+}
+
+.theme4{
+    --clr-primary : hsla(40, 50%, 85%, 1);
+    --clr-primary-accent : hsla(220, 45%, 30%, 1);
+    --clr-secondary : hsla(220, 50%, 85%, 1);
+    --clr-text : hsla(220, 70%, 60%, 1);
+}
+
+.theme-wrapper{
+    cursor: pointer;
+    --theme-size: 2rem;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    width: var(--theme-size);
+    height: var(--theme-size);
+    right: 10px;
+    top: 10px;
+    padding-top: var(--theme-size);
+    overflow: hidden;
+    box-shadow: 0 0 0px 1px var(--clr-primary-accent) inset;
+    border-radius: 50%;
+    background: linear-gradient(315deg, var(--clr-primary)40%, var(--clr-primary-accent)45% 55%, var(--clr-secondary)60%);
+}
+
+
+
+.theme-switcher-open {
+    height: max-content !important;
+    box-sizing: content-box;
+    z-index: 15;
+    top: 8px;
+    right: 8px;
+    border-radius: 0;
+    padding: 0 0.2em;
+    background: none;
+    box-shadow: none;
+}
+
+.theme-swatch {
+    width: var(--theme-size);
+    height: var(--theme-size);
+    margin: 0.2em 0;
+    order: 1;
+    border-radius: 50%;
+    border: 1px solid var(--clr-primary-accent);
+    background: linear-gradient(315deg, var(--clr-primary)40%, var(--clr-primary-accent)45% 55%, var(--clr-secondary)60%);
+
+}
+
+.theme-swatch:hover {
+    box-shadow: 0 0 3px 1px var(--clr-primary-accent);
+}
+
 /* lists section */
     .all-tasks {
         visibility:visible;
@@ -44,7 +116,7 @@ header {
         align-items: center;
         position: relative;
         width: 85vw;
-        color: var(--text-clr-secondary);
+        color: var(--clr-text);
         background-color: var(--clr-primary);
         z-index: 0;
         font-size: 0.6em;
@@ -72,7 +144,6 @@ header {
         border-radius: 0.15em 0.15em 0 0;
         font-size: 1.5rem;
         font-weight: 900;
-        text-align: center;
         background: var(--clr-secondary);
         color: var(--clr-primary);
     }
@@ -88,6 +159,7 @@ header {
         height: 2.2rem;
         width: 100%;
         overflow-x: scroll;
+        border-radius: 0.7em 0.7em 0 0;
         transition: height 220ms ease-in-out;
         margin-top: 1em;
         padding: 0;
@@ -97,7 +169,7 @@ header {
         display: inline-flex;
         align-items: center;
         cursor: pointer;
-        flex: 0 2 40%;
+        flex: 0 4 40%;
         height: 100%;
         padding: 0.7rem;
         text-align: left;
@@ -129,18 +201,18 @@ header {
         position: relative;
         display: flex;
         font-size: 1.4em;
-        /* flex-grow: 4; */
         padding: 0 1em;
         padding-bottom: 0;
-        flex-shrink: 3;
         order: 10;
         width: 100%;
+        height: 100%;
         min-width: 11rem;
         overflow: hidden;
         margin-left: auto;
-        border: 1px solid var(--clr-primary-accent);
+        border: 1px solid hsla(255, 0%, 0%, 0.3);
         border-bottom: none;
         border-radius: 0.7em 0.7em 0 0;
+        z-index: 1;
         background-color: var(--clr-secondary);
     }
 
@@ -193,7 +265,7 @@ header {
         border-radius: 8px;
         border: 1px solid hsla(255, 0%, 0%, 0.3);
         background-color: var(--clr-secondary);
-        color: var(--text-clr-secondary);
+        color: var(--clr-text);
         z-index: 1;
         box-shadow: 0 5px 8px 2px var(--clr-primary-accent);
 
@@ -359,7 +431,7 @@ header {
     }
 
     .btns-wrapper > .btn:hover {
-        color: var(--text-clr-primary);
+        color: var(--clr-text);
 
     }
 /* x */
