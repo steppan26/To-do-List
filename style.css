@@ -473,6 +473,7 @@ header {
         align-items: flex-start;
         background: none;
         list-style: circle inside;
+        overflow-x: hidden;
     }
 
     .task-list > li{
