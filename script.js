@@ -44,6 +44,7 @@ themeSwitcher.addEventListener('click', e => {
 })
 
 themesArray.forEach(theme => {
+    theme.className = "theme-swatch"
     theme.addEventListener('click', e => {
         console.log(e.target)
         htmlElement.className = theme.id
