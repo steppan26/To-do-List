@@ -17,16 +17,13 @@ const themeSwitcher = document.querySelector('[data-theme-switcher]')
 const htmlElement = document.querySelector('[data-html-element]')
 const themesArray = [...themeSwitcher.children]
 
-
-
-
-
-
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY))
+
+const minWidth = window.matchMedia("(max-width: 680px)")
 
 newListMenuBtn.addEventListener('click', e => {
     toggleNewListMenu()
@@ -43,10 +40,8 @@ themeSwitcher.addEventListener('click', e => {
     themeSwitcher.classList.toggle('theme-switcher-open')
 })
 
-themesArray.forEach(theme => {
-    theme.className = "theme-swatch"
+themesArray.forEach( theme => {
     theme.addEventListener('click', e => {
-        console.log(e.target)
         htmlElement.className = theme.id
     })
 });
@@ -96,9 +91,12 @@ clearCompleteTasksBtn.addEventListener('click', e => {
 })
 
 function toggleNewListMenu(){
-    newListForm.classList.toggle('hidden')
-    newListMenuBtn.innerText === '＋' ? newListMenuBtn.innerText = 'Ｘ' : newListMenuBtn.innerText = '＋'
-
+    if(minWidth.matches){
+        newListForm.classList.toggle('hidden')
+        !newListForm.classList.contains('hidden') ? newListMenuBtn.innerText = 'Ｘ' : newListMenuBtn.innerText = '＋'
+    } else {
+        newListForm.classList.remove('hidden')
+    }
 }
 
 function createList(name) {
@@ -181,4 +179,5 @@ function clearElement(element) {
     }
 }
 
+toggleNewListMenu()
 render()

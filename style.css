@@ -102,7 +102,6 @@ header {
     border-radius: 50%;
     border: 1px solid var(--clr-primary-accent);
     background: linear-gradient(315deg, var(--clr-primary)40%, var(--clr-primary-accent)45% 55%, var(--clr-secondary)60%);
-
 }
 
 .theme-swatch:hover {
@@ -236,6 +235,9 @@ header {
     max-width: 80%;
 }
 
+.new-input{
+    opacity: 0.6;
+}
 
 .new-input:focus{
     border-bottom-width: 2px;
@@ -434,8 +436,8 @@ header {
         display: grid;
         align-items: flex-start;
         justify-items: center;
-        grid-gap: 4em;
-        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-gap: 3em;
+        grid-template-columns: 1fr 2fr 4fr 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas:
         "title title title title"
@@ -447,11 +449,6 @@ header {
         grid-area: title;
     }
 
-    section {
-        /* margin-left: 10rem; */
-        grid-area: tasks;
-        width: max-content;
-    }
 
     .all-tasks {
         display: flex;
@@ -462,6 +459,12 @@ header {
         padding: 2em;
         color: var(--clr-primary);
         border-radius: 8px;
+        max-width: 300px;
+        font-size: 0.75em;
+    }
+
+    .hidden {
+        min-width: none !important;
     }
 
     .task-list {
@@ -487,8 +490,43 @@ header {
         color: inherit;
         border-radius: 0;
         font-size: 1.1em;
+        box-shadow: none;
 
         transition: opacity 190ms ease-in-out;
+    }
+
+    .task-list > form {
+        position: relative;
+        display: flex;
+        font-size: 1.4em;
+        padding: 1em 1em;
+        padding-bottom: 0;
+        order: 10;
+        width: 100%;
+        height: 100%;
+        min-width: 11rem;
+        margin-left: auto;
+        box-shadow: none;
+        border-bottom: none;
+        border-radius: 0;
+        z-index: 1;
+        background-color: var(--clr-secondary);
+    }
+
+    .task-list > form:hover {
+        opacity: 0.6;
+    }
+
+    .new-list-menu-btn {
+        visibility: hidden;
+    }
+
+    section {
+        /* margin-left: 10rem; */
+        grid-area: tasks;
+        width: 100%;
+        max-width: 500px;
+        justify-self: stretch;
     }
 
     .tasks {
@@ -512,6 +550,7 @@ header {
     }
 
     .list-header {
+        font-size: 1rem;
         padding: 1em;
     }
 
