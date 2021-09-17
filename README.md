@@ -1,4 +1,4 @@
-To-do List App
+# To-do List App
 
 https://steppan26.github.io/To-do-List/
 
@@ -28,11 +28,11 @@ My firs thought when deciding to do a 'to-do list' app was to create an app wher
 ### Screenshots
 
 
-<img alt="desktop-mode screenshot using theme 1" src="/screenshots/Screenshot_0.png" height="600" />
+<img alt="desktop-mode screenshot using theme 1" src="./screenshots/Screenshot_0.png" height="600" />
 
-<img alt="desktop-mode screenshot using theme 2" src="/screenshots/Screenshot_1.png" height="600" />
+<img alt="desktop-mode screenshot using theme 2" src="./screenshots/Screenshot_1.png" height="600" />
 
-<img alt="mobile-mode screenshot using theme 3" src="/screenshots/Screenshot_2.png" height="600" />
+<img alt="mobile-mode screenshot using theme 3" src="./screenshots/Screenshot_2.png" height="600" />
 
 
 
