@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart Brain App - Full-stack project
 
 https://steppan26.github.io/To-do-List/
@@ -149,3 +150,42 @@ I hope to someday come back to this project once I have learnt more techniques, 
 I would like to thank **Andrei Naegoie** for his fantastic enthusiasm and detailed information. I particularly liked the way the course has been updated throughout the years and how he still keeps old content, which may not be seen as relevant after an update or new software has been released, but instead teaches you the old ways of doing things so that you have a better understanding of why certain tools exist.
 
 I would also like to thank **Wolfgang**, the teacher's assistant over on Udemy, who is always very quick to respond to any question and/or comment to help us keep up with the course. This is so valuable to help students not get discouraged when it becomes difficult to follow the video.
+=======
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/steppan26/To-do-List/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/steppan26/To-do-List/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+>>>>>>> 2469d6a14eb55aaa68dfb8e96414ea16e79da3e2
