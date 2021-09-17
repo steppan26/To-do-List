@@ -23,7 +23,6 @@ const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = JSON.parse(localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY))
 
-const minWidth = window.matchMedia("(max-width: 680px)")
 
 newListMenuBtn.addEventListener('click', e => {
     toggleNewListMenu()
@@ -89,6 +88,8 @@ clearCompleteTasksBtn.addEventListener('click', e => {
     selectedList.tasks = selectedList.tasks.filter(task => !task.complete)
     saveAndRender()
 })
+
+const minWidth = window.matchMedia("(max-width: 680px)")
 
 function toggleNewListMenu(){
     if(minWidth.matches){

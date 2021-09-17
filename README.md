@@ -3,9 +3,8 @@
 
 https://steppan26.github.io/To-do-List/
 
-This is the final state of a project that I worked on whilst following along **'The Complete Web Developer in 2021: Zero to Mastery"** course, by Andrei Naegoie, that I bought on Udemy.
-
-This course is what got me started in the world of web development and it guided me through a lot of extremely useful techniques and information. We worked on a number of small projects initially to learn core concepts before ultimately working on this project for over half of the course.
+The idea behind this project was to create a simple to-do app using HTML, CSS and vanilla Javascript. The main idea behind this project is to make use of storing information locally no the browsers as opposed to using databases and servers. The intention of this app is to have a solid framwork from which to continue adding features and/or try out new methods and techniques as I learn them.
+As always, this app was designed using a mobile-first approach, which helps make it much easier to have a responsive design.
 
 ## Table of contents
 
@@ -26,28 +25,23 @@ This course is what got me started in the world of web development and it guided
 
 ### The challenge
 
-Initially the challenge was to get through the whole course, developing and ultimately deploying a full functioning web app with a working front-end and back-end. The intention of this course, for me, was to gain an understanding of the steps, processes, tools and skills required to create a fully functioning web app.
-
-Whilst working on this project I would regularly take time away to work on other little projects, usually projects on frontendmentors.com, so that I could practice what I had been taught in a seperate and different environment to the one which had been set up throughout this tutorial.
-By the end of the course I felt that I had learnt so much, not only from what had been taught during the course but also through my own challenges, problems and researching that I did. I had always had the intention to modify the project on the front end to make it more unique to myself, but by the time I got to the end of the project I felt I had enough confidence to implement what I felt were necessary changes [such as displaying error messages to the user on the page whenever there is a problem, something which the course did not implement]
+My firs thought when deciding to do a 'to-do list' app was to create an app where I could add more and more features over time as my competences develop and I learn new techniques and methods. I had initally designed the app to use a server and database and despite actually having a working server that stored the information on a database, I decided that this was over-complicating things. As such I decided that I wanted to learn how to store information locally on the browser, which would avoid having to have users create a profile and log in each time they wish to use the app.
 
 ### Screenshots
 
 
-<img alt="landing page for desktop version" src="/screenshots/Screenshot_LandingPage_Desktop.png" height="600" />
+<img alt="desktop-mode screenshot using theme 1" src="/screenshots/Screenshot_0.png" height="600" />
 
-<img alt="home page for desktop version" src="/screenshots/Screenshot_HomePage_Desktop.png" height="600" />
+<img alt="desktop-mode screenshot using theme 2" src="/screenshots/Screenshot_1.png" height="600" />
 
-<img alt="landing page for mobile version" src="/screenshots/Screenshot_LandingPage_Mobile.png" height="600" />  <img alt="home page for mobile version" src="/screenshots/Screenshot_HomePage_Mobile.png" height="600" />  <img alt="menu for mobile version" src="/screenshots/Screenshot_Menu_Mobile.png" height="600" />
-
+<img alt="mobile-mode screenshot using theme 3" src="/screenshots/Screenshot_2.png" height="600" />
 
 
 
 ### Links
 
-- Live Site URL: [https://smart-brain-faceapp1-front-end.herokuapp.com/](https://smart-brain-faceapp1-front-end.herokuapp.com/)
-- Front-end github repository: [https://github.com/steppan26/FaceRecognitionApp-fe](https://github.com/steppan26/FaceRecognitionApp-fe)
-- Back-end/API github repository: [https://github.com/steppan26/FaceRecognitionApp-api](https://github.com/steppan26/FaceRecognitionApp-api)
+- Live Site URL: [steppan26.github.io/To-do-List/](https://steppan26.github.io/To-do-List/)
+- Github repository: [github.com/steppan26/To-do-List](https://github.com/steppan26/To-do-List)
 
 ## My process
 
@@ -55,79 +49,35 @@ By the end of the course I felt that I had learnt so much, not only from what ha
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- Javascript
-- Node.js
+- CSS Flexbox + Grid
+- Vanilla Javascript
 - Mobile-first workflow
-- React - JS library
-- Heroku - Cloud application platform
-- Postman - For setting up and testing/debugging back-end server requests
 
 
 ### What I learned
 
-I came into this project knowing a small amount of front-end as I worked through the udemy course. This project was designed by the course to teach us about the back-end of web development. The front-end was built with a very simple design, the landing page was literally just a 'sign in' section, with an option to register, which would then take you to the main home page where you can submit a url of an image for the API to attempt face-detection.
+Despite this being a seemingly simple project, for sure simpler than some of the previous projects I have worked on, I still learned a huge amount. My very first attemp at this app I had create a working app using React.js and a server + database, which was fully functioning with drag and drop elements. However I realised that I had over-complicated it, and I also figured that using a backend server + database was a bit overkill and would have required users to create a profile for their list to be saved to the database, this is something I felt did not suit this project.
+I then started the project from scratch with the intent to use local browser storage to keep the users' lists, and some simple HTML, CSS + vanilla JS to create the app. After a couple of projects using React it was nice to be able to go back to the basics, creating boiler-plate HTML and a single JS file.
 
-I used this project as an opportunity to create my first full-stack app, with a solid front-end structure and design, coupled with the back-end code which was worked through.
-As the course was rather long (roughly 37hours of video), we were shown the fundamentals to build a solid backend with a secure password hash generator, however I then took it of my own initiative to further develop this by ensuring that any error response received from the server is displayed in a meaningful way to the user, whilst keeping within the design of the site.
+One of the key takeways from this project was the ability to use data-attributes and a query selector to more easily grab a DOM element without having to dish out nmerous classes/ID's. This is something very useful which I have no doubt I will be using more in future projects.
+Another key takeaway from this project was the use of the <template> tag which allows you to create an HTML structure to be re-used multiple times in javascript, this is yet another feature that I did not know existed and I can see how useful it could be (I already envisioned some exampels where this would have been useful to know in some previous projects)
 
-I also opted to add a little more flair on the landing page, and making the 'sign in' and 'register' sections tab-able with refreshing the whole page. I feel very proud that I was able to implement virtually all changes/additions that I wanted to.
+For this project I also wanted to make more of an effort at making sure that I took into consideration the accessibility of the app.
 
-The following function changes the appearance of the 'Sign In' and 'Register' tabs on the landing page, which allows the user to see which section has been clicked/selected
+This was not the first time that I have used media queries, but it is the first time that I have used them within the JS code to change the functionality of the app depending on the screen resolution. It turns out that this is easier than I expected, still I am pretty happy with having figured it out:
+
 ```js
-const tabSelect = (routeDirection) =>{
-        const loginTab = document.getElementById("loginTab")
-        const registerTab = document.getElementById("registerTab")
+const minWidth = window.matchMedia("(max-width: 680px)")
 
-        switch (routeDirection){
-            default:
-                break
-            case "SignIn":
-                loginTab.classList.remove("tabUnselected")
-                loginTab.classList.add("tabSelected")
-                registerTab.classList.remove("tabSelected")
-                registerTab.classList.add("tabUnselected")
-                onRouteChange(routeDirection)
-                break
-            case "Register":
-                registerTab.classList.add("tabSelected")
-                registerTab.classList.remove("tabUnselected")
-                loginTab.classList.remove("tabSelected")
-                loginTab.classList.add("tabUnselected")
-                onRouteChange(routeDirection)
-                break
-        }
+function toggleNewListMenu(){
+    if(minWidth.matches){
+        newListForm.classList.toggle('hidden')
+        !newListForm.classList.contains('hidden') ? newListMenuBtn.innerText = 'Ｘ' : newListMenuBtn.innerText = '＋'
+    } else {
+        newListForm.classList.remove('hidden')
     }
 }
 ```
-
-The following function gets run whenever an error message is received from the server whilst registering. This function allows the displaying of error messages for the 'name', 'email' and 'password' input fields individually depending on whether each has met the required conditions to be passed to the databases.
-```js
-showErrorMessage = (email=true, password=true, name=true) =>{
-        console.log(name, email, password)
-        const nameError = document.getElementById("registerNameError")
-        const emailError = document.getElementById("registerEmailError")
-        const passwordError = document.getElementById("registerPasswordError")
-
-        if(!email){
-            emailError.style.display = "block"
-        } else {
-            emailError.style.display = "none"
-        }
-        if(!password){
-            passwordError.style.display = "block"
-        } else {
-            passwordError.style.display = "none"
-        }
-        if(!name){
-            nameError.style.display = "block"
-        } else {
-            nameError.style.display = "none"
-        }
-    }
-```
-
-I am also extremely proud of having managed to get through the various sticking points throughout the course. The tutor was mostly working on Mac, and on occasion he would be using software or methods which are unique to Mac and as such had to research the various ways to do the same thing on Windows. This was frustrating at first but ultimately provided me with the opportunity to learn how to find out information for myself which others may not be able to provide to me.
 
 ### Continued development
 
