@@ -450,6 +450,9 @@ header {
         grid-area: title;
     }
 
+    .theme-wrapper {
+        --theme-size: 2.5rem
+    }
 
     .all-tasks {
         display: flex;
@@ -534,6 +537,7 @@ header {
     .tasks {
         overflow-y: scroll;
         max-height: 50vh;
+        scrollbar-width: none ;
     }
 
 
