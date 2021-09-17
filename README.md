@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 To-do List App
 
 https://steppan26.github.io/To-do-List/
@@ -18,7 +17,6 @@ As always, this app was designed using a mobile-first approach, which helps make
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -81,61 +79,16 @@ function toggleNewListMenu(){
 
 ### Continued development
 
-I fully intend to continue my development as a web developper. For my next project i intend to use a lot of the same methods and techniques learnt during this course, but on my own project without a guiding hand all the way through.
-I hope to someday come back to this project once I have learnt more techniques, and I feel more comfortable working with servers and databases, to add more features.
+The intent for this app is to have a solid platform to come back to whenever there are new techniques that I wish to try out, as such I expect this project to continue to evolve as my skills evolve.
+For my personal development, I will be attending a full-stack development bootcamp in 2 weeks, as such I intend on researching new techniques/methods/laguages to prepare for the course. I will also start to think about the design for my portfolio.
 
 ### Useful resources
 
 - [Stack Overflow](https://www.stackoverflow.com) - This website is a fantastic place to find answers to questions which may have already been asked by somebody else. The community is extremely useful and you can often find multiple responses to a problem, which is a great way or learning about new techniques, methods and functions.
-- [W3 Schools](https://www.w3schools.com/) - Still being rather new to web development there are still a lot of features and techniques which I am either not familiar, or comfortable, with. This site is always there to help me better understand a method/function and what methods/functions I have access to.
+- [MDN](https://developer.mozilla.org) - Still being rather new to web development there are still a lot of features and techniques which I am either not familiar, or comfortable, with. This site is always there to help me better understand a method/function and what methods/functions I have access to.
 
 
 ## Author
 
 - Github - [Stéphane Baroux](https://github.com/steppan26)
 - Frontend Mentor - [@steppan26](https://www.frontendmentor.io/profile/steppan26)
-
-## Acknowledgments
-
-I would like to thank **Andrei Naegoie** for his fantastic enthusiasm and detailed information. I particularly liked the way the course has been updated throughout the years and how he still keeps old content, which may not be seen as relevant after an update or new software has been released, but instead teaches you the old ways of doing things so that you have a better understanding of why certain tools exist.
-
-I would also like to thank **Wolfgang**, the teacher's assistant over on Udemy, who is always very quick to respond to any question and/or comment to help us keep up with the course. This is so valuable to help students not get discouraged when it becomes difficult to follow the video.
-=======
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/steppan26/To-do-List/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/steppan26/To-do-List/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
->>>>>>> 2469d6a14eb55aaa68dfb8e96414ea16e79da3e2
