@@ -28,11 +28,11 @@ My firs thought when deciding to do a 'to-do list' app was to create an app wher
 ### Screenshots
 
 
-<img alt="desktop-mode screenshot using theme 1" src="./screenshots/Screenshot_0.png" height="600" />
+<img alt="desktop-mode screenshot using theme 1" src="./Screenshots/Screenshot_0.png" height="600" />
 
-<img alt="desktop-mode screenshot using theme 2" src="./screenshots/Screenshot_1.png" height="600" />
+<img alt="desktop-mode screenshot using theme 2" src="./Screenshots/Screenshot_1.png" height="600" />
 
-<img alt="mobile-mode screenshot using theme 3" src="./screenshots/Screenshot_2.png" height="600" />
+<img alt="mobile-mode screenshot using theme 3" src="./Screenshots/Screenshot_3.png" height="600" /> <img alt="mobile-mode screenshot using theme 4" src="./Screenshots/Screenshot_2.png" height="600" />
 
 
 
