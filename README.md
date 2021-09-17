@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Smart Brain App - Full-stack project
+To-do List App
 
 https://steppan26.github.io/To-do-List/
 
